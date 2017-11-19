@@ -1,0 +1,44 @@
+- - - - - - - - - - - - - - - -
+- - - - - - - - - - - - - - - -
+- - - - - - - - - - - - - - - -
+- - - - a - - - - - - - - - - -
+- - - 1 - 1 - b - - - - - - - -
+- - 1 - - - c - 1 - - - - - - -
+- d - - - 0 - 2 - 1 - - - - - -
+2 - 1 - 0 - - - 2 - 1 - - - - -
+- - - 1 - - - - - 2 - 1 - - - -
+- - 0 - 1 - - - - - 2 - 1 - - -
+- 0 - - - e - - - f - 2 - 1 - -
+0 - - - 3 - 2 - 3 - 2 - 2 - 1 -
+- - - 3 - - - x - - - 2 - 2 - 1
+- - - - - - - - - - - - - - - -
+
+Important:
+  Look at F moving north west. It aggregates with the line from a moving south west, but before it crosses d and becomes worth 2. We need to keep track of line segments/heights
+
+Conclusions:
+a. If I can get left diagonal from a I can score 1
+   If I can get right diagonal from a I can score 1
+
+b. If I can get right diagonal from b I can score 1
+   If I can get left diagonal from b I can not score anything (c is a blocker)
+
+c. If I can get left diagonal from c I can not score (due to b)
+   If I can get right diagonal from c I can score 1, this leaves me right diagonal from a so I can score an additional 1
+
+d. If I can get left diagonal from d I can score 1.
+   This leaves me left diagonal from d so I can score an additional 1
+   If I can get right diagonal from d I can score 1
+
+
+e. If I can get left diagonal from e I can score 1.
+   This can leave me right diagonal from c so I can score an additional 2'
+   This can also leave me right diagonal from b so I can score an additional 1
+   If I can get right diagonal from e I can score 1.
+   This can leave me right diagonal from d so I can score an additional 1
+
+f. If I can get left diagonal from f I can score 1.
+   This can leave me right diagonal from c so I can score an additional 2
+   This can also leave me right diagonal from b so I can score an additional 1
+   If I get right diagonal from f I can score 1.
+   This can leave me left diagonal from a so I can score an additional 1
