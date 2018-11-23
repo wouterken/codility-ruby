@@ -1,0 +1,35 @@
+# values = [1,4,2,3,5] # 19
+
+
+1 4 2 3 5
+
+
+
+        1 N     I1 F0 S1 T1
+       12 RN    I1 F0 S2 T3
+      123 RRN   I1 F0 S3 T6
+     1423 RNLL  I1 F1 S5 T11
+    14235 RRRRN I1 F2 S8 T19
+
+[5,2,6,3,1,4]
+
+
+           1    N    I1 F0 S1  T1
+          21   NL    I1 F0 S2  T3
+         231  RNL    I1 F0 S3  T6
+        2314  RRRN    I1 F2 S6  T12
+       52314 NLLLL   I1 F4 S11 T23
+      526314 RRNLLL  I1 F1 S13 T36
+
+
+
+For every flip, we increase the steps by the number of iterations since the last flip
+
+
+            1     --N---
+            12    --RN--
+            123   --RRN-
+            4123  -NLLL-
+           54123  NLLLL-
+                  RRRRRN
+           541236 R14321

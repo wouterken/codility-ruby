@@ -1,0 +1,73 @@
+Toy:
+- 1)
+  ☐ Add 0
+  ☐ Active palindromes[tail: 0v] => 1
+  ☐ 0o, 2e, 0
+
+- 2)
+  ☐ Add 2
+  ☐ Active palindromes[0i, tail: 2v] => 1
+  ☐ 0o, 2o, 1
+
+- 3)
+  ☐ Add 0
+  ☐ Active palindromes[0v, 2i, tail: 0v] => 1
+  ☐ 0e, 2o, 1
+
+- 4)
+  ☐ Add 0
+  ☐ Active palindromes[0i, 2v, 0v, tail: 0v] => 3
+  ☐ 0o, 2o, 3
+
+- 5)
+  ☐ Add 2
+  ☐ Active palindromes[0v, 2v, 0v, 0v, tail: 2v] => 5
+  ☐ 0o, 2e, 3
+
+- 6)
+  ☐ Add 2
+  ☐ Active palindromes[0i, 2i, 0v, 0v, 2v, tail: 2v]
+  ☐ 0o, 2o, 5
+
+- 7)
+  ☐ Add 0
+  ☐ Active palindromes[0v, 2i, 0v, 0v, 2v, 2i, tail: 0v]
+
+- 8)
+  ☐ Add 1
+  ☐ Active palindromes[0i, 2i, 0i, 0v, 2i, 2i, 0i, tail: 1v]
+
+Base Case:
+- 1) Add 0
+   ☐ Active palindromes[tail: 0v] => 1
+- 2) Add 0
+   ☐ Active palindromes[0v, tail: 0v] => 2
+- 3) Add 0
+   ☐ Active palindromes[0v, 0v, tail: 0v] => 3
+
+Alternating:
+- 1)
+  ☐ Add 0
+  ☐ Active palindromes[tail: 0v] => 1
+
+- 2)
+  ☐ Add 1
+  ☐ Active palindromes[0i, tail: 1v] => 1
+
+- 3)
+  ☐ Add 0
+  ☐ Active palindromes[0v, 1i, tail: 0v] => 2
+
+- 4)
+  ☐ Add 1
+  ☐ Active palindromes[0i, 1v, 0i, tail: 1v] => 2
+
+- 4)
+  ☐ Add 0
+  ☐ Active palindromes[0v, 1i, 0v,  1i, tail: 0v] => 3
+
+
+Rules:
+  When you add a number N it will either make the total count of N's
+  odd or even.
+    If even:
